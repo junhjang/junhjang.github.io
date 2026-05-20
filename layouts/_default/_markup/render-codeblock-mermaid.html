@@ -1,0 +1,5 @@
+{{/* Renders ```mermaid code fences as diagrams. Flags the page so the loader is added. */}}
+<pre class="mermaid">
+{{- .Inner | htmlEscape | safeHTML }}
+</pre>
+{{ .Page.Store.Set "hasMermaid" true }}

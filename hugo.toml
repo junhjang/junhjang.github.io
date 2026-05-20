@@ -1,0 +1,51 @@
+baseURL = "https://junhjang.github.io/"
+languageCode = "en-us"
+title = "Junhyuk Jang"
+theme = "PaperMod"
+enableRobotsTXT = true
+enableEmoji = true
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+  [markup.goldmark.renderer]
+    unsafe = true   # allow raw HTML/SVG/JS embeds inside markdown
+
+[pagination]
+  pagerSize = 8
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  math = true            # enable KaTeX site-wide (see extend_head.html)
+  mainSections = ["posts"]
+
+  # Home = the post list itself (no splash page). Name + icons sit at the top,
+  # posts right below. Leave Content empty for a clean, minimal header.
+  [params.homeInfoParams]
+    Title = "Junhyuk Jang"
+    Content = ""
+
+  # Social links — shown as icons on the home page.
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/junhjang"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/junhjang/"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
