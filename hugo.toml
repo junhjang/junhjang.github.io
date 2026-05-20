@@ -12,6 +12,12 @@ enableEmoji = true
     guessSyntax = true
   [markup.goldmark.renderer]
     unsafe = true   # allow raw HTML/SVG/JS embeds inside markdown
+  # Math: hand math delimiters to KaTeX untouched (no markdown mangling).
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['$$', '$$'], ['\[', '\]']]
+      inline = [['$', '$'], ['\(', '\)']]
 
 [pagination]
   pagerSize = 8
