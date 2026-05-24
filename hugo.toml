@@ -25,6 +25,7 @@ enableGitInfo = true     # use git commit time as each post's lastmod
 
 [params]
   defaultTheme = "auto"
+  images = ["og-image.png"]   # site-wide default Open Graph card (1200x630)
   ShowReadingTime = true
   ShowCodeCopyButtons = true
   ShowToc = true
