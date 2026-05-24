@@ -1,0 +1,29 @@
+{{- /*
+  Site-level override of PaperMod's empty comments partial.
+  Renders the giscus widget when [params.giscus] is configured.
+  giscus uses GitHub Discussions on this repo as the comment backend.
+
+  Setup steps done once:
+    1. Repo Settings → Discussions enabled (via gh CLI)
+    2. Install giscus app on the repo (https://github.com/apps/giscus)
+    3. Config below: data-repo / repo-id / category / category-id
+
+  Mapping = "pathname" → one discussion thread per post URL path.
+*/ -}}
+{{- with .Site.Params.giscus -}}
+<script src="https://giscus.app/client.js"
+        data-repo="{{ .repo }}"
+        data-repo-id="{{ .repoId }}"
+        data-category="{{ .category }}"
+        data-category-id="{{ .categoryId }}"
+        data-mapping="{{ default "pathname" .mapping }}"
+        data-strict="{{ default "0" .strict }}"
+        data-reactions-enabled="{{ default "1" .reactionsEnabled }}"
+        data-emit-metadata="{{ default "0" .emitMetadata }}"
+        data-input-position="{{ default "bottom" .inputPosition }}"
+        data-theme="{{ default "preferred_color_scheme" .theme }}"
+        data-lang="{{ default "en" .lang }}"
+        crossorigin="anonymous"
+        async>
+</script>
+{{- end -}}

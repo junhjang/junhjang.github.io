@@ -4,6 +4,7 @@ title = "Junhyuk Jang"
 theme = "PaperMod"
 enableRobotsTXT = true
 enableEmoji = true
+enableGitInfo = true     # use git commit time as each post's lastmod
 
 [markup]
   [markup.highlight]
@@ -28,6 +29,21 @@ enableEmoji = true
   ShowCodeCopyButtons = true
   ShowToc = true
   TocOpen = false
+  ShowPostNavLinks = true   # prev/next post links at the bottom
+  ShowLastMod = true        # display "Updated: ..." when lastmod differs from date
+  comments = true           # render the comments partial on posts
+
+  # giscus: GitHub Discussions-backed comments
+  # IDs come from gh GraphQL on this repo (Discussions enabled, "General" category).
+  [params.giscus]
+    repo = "junhjang/junhjang.github.io"
+    repoId = "R_kgDOSi5NMg"
+    category = "General"
+    categoryId = "DIC_kwDOSi5NMs4C9vFf"
+    mapping = "pathname"
+    inputPosition = "bottom"
+    theme = "preferred_color_scheme"
+    lang = "en"
   math = true            # enable KaTeX site-wide (see extend_head.html)
   mainSections = ["posts"]
 
